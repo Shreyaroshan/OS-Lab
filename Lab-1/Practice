@@ -1,0 +1,143 @@
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls d*
+dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat > dino.txt
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus  
+Indominus Rex
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat dino.txt
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus
+Indominus Rex
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls duchess queen
+ls: cannot access 'duchess': No such file or directory
+ls: cannot access 'queen': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *.txt
+a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mkdir ab1
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mkdir first.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+ab1  a.txt  dino.txt  first.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rm first.txt
+rm: cannot remove 'first.txt': Is a directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir first.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+ab1  a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[1-9]
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls [1-9]
+ls: cannot access '[1-9]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls '[1-9]'
+ls: cannot access '[1-9]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls [1]
+ls: cannot access '[1]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls [!0-9]
+ls: cannot access '[!0-9]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+ab1  a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[!0-9]
+a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[0-9]
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mkdir abc9
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[0-9]
+ab1:
+
+abc9:
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls -d *[0-9]
+ab1  abc9
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cd ab1
+shreya@shreyasvm:~/OS_Lab_Practical/lab1/ab1$ touch ab1content.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1/ab1$ cd -
+/home/shreya/OS_Lab_Practical/lab1
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[0-9]
+ab1:
+ab1content.txt
+
+abc9:
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls [.,:]
+ls: cannot access '[.,:]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[;,:]
+ls: cannot access '*[': No such file or directory
+,:]: command not found
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[.,:]
+ls: cannot access '*[.,:]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[a-z]
+a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls [a-z]
+ls: cannot access '[a-z]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls -d *[a-z]
+a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls -d [a-z]*
+ab1  abc9  a.txt  dino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ touch program.c
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls program[co]
+ls: cannot access 'program[co]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls program.[co]
+program.c
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls program.[a-z]
+program.c
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls -d [a-z0-9]
+ls: cannot access '[a-z0-9]': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[a-z0-9]
+a.txt  dino.txt  program.c
+
+ab1:
+ab1content.txt
+
+abc9:
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ head dino.txt
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus
+Indominus Rex
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ tail dino.txt
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus
+Indominus Rex
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cp dino.txt/temp
+cp: missing destination file operand after 'dino.txt/temp'
+Try 'cp --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ touch temp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cp dino.txt/temp
+cp: missing destination file operand after 'dino.txt/temp'
+Try 'cp --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mkdir tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cp dino.txt/tmp
+cp: missing destination file operand after 'dino.txt/tmp'
+Try 'cp --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cp dino.txt temp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat temp
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus
+Indominus Rex
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cp dino.txt /tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat tmp
+cat: tmp: Is a directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cp dino.txt /tmp/newdino.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat newdino.txt
+cat: newdino.txt: No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat /tmp/newdino.txt
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus
+Indominus Rex
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mv temp tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls tmp
+temp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+ab1  abc9  a.txt  dino.txt  program.c  tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls /tmp
+anacron-Nxl6ge
+anacron-PEt2b3
+anacron-tyUwR0
+dino.txt
+newdino.txt
