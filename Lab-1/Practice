@@ -291,3 +291,12 @@ alone.mp3
 
 tmp:
 temp
+
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ head -n 5 dino.txt | tail -n 1
+Indominus Rex
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat dino.txt
+Spinosaurus
+Tyrannosaurus Rex
+Velociraptor
+Argentinosaurus
+Indominus Rex
