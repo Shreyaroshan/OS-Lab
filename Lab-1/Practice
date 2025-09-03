@@ -141,3 +141,21 @@ anacron-PEt2b3
 anacron-tyUwR0
 dino.txt
 newdino.txt
+shreya@shreyasvm:~$ cd OS_Lab_Practical/lab1
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ touch alone.mp3 self_love.pl3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls -l *.mp3 > mp3files.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rm self_love.pl3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat mp3files.txt
+-rw-rw-r-- 1 shreya shreya 0 Sep  3 10:51 alone.mp3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat > file.txt
+This is the line of text
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat >> file.txt
+This is the second line of text
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ cat file.txt
+This is the line of text
+This is the second line of text
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ head file.txt
+This is the line of text
+This is the second line of text
