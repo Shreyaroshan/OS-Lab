@@ -1,0 +1,58 @@
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat >>fruitlist.txt
+ko
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -x '..' fruitlist.txt
+ko
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep '^[A-Z]' fruitlist.txt
+Banana
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep '\.$' fruitlist.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep ' ' fruitlist.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep ' ' logfile.txt
+error log1
+error log3
+log 4
+log 5
+error log 6
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat >> fruitlist.txt
+melon2
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep '[0-9]' fruitlist.txt > digits.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat digits.txt
+melon2
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -c '[0-9]' numbers.txt
+0
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -c '[0-9]' fruitlist.txt
+1
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls
+a       digits.txt     -M          numbers.txt       sorted_numbers
+ab.txt  fruitlist.txt  marks.txt   s_numbers.txt
+a.txt   logfile.txt    months.txt  sorted_fruitlist
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat numbers.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep ' ' marks.txt
+Alice 89
+Bob 56
+Martha 99
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/.\(.\)&/\1/' marks.txt
+Alice 89
+Bob 56
+Martha 99
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/.\(.\)&/\1/' fruitlist.txt
+apple
+Banana
+peach
+pineapple
+kiwi
+orange
+mango
+ko
+melon2
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/.\(.\)$/\1/' fruitlist.txt
+appe
+Banaa
+peah
+pineappe
+kii
+orane
+mano
+o
+melo2
