@@ -127,3 +127,264 @@ shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -nr numbers.txt
 3
 1
 
+shreya@shreyasvm:~$ cd OS_Lab_Practical/lab2
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -k2 -n marks.txt
+Bob 56
+Alice 89
+Martha 99
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ touch months.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat > months.txt
+Jan
+Mar
+July
+Dec
+Feb
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -M months.txt
+Jan
+Feb
+Mar
+July
+Dec
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -f fruitlist.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat fruitlist.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -f logfile.txt
+error log1
+error log3
+error log 6
+log2
+log 4
+log 5
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -o months.txt months.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat months.txt
+Dec
+Feb
+Jan
+July
+Mar
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sort -o -M months.txt months.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat months.txt
+Dec
+Feb
+Jan
+July
+Mar
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ wc months.txt
+ 5  5 21 months.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls | wc -w
+11
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls -l | cut -f2 -d " "
+20
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls -l
+total 20
+-rw-rw-r-- 1 shreya shreya  0 Sep  3 11:47 ab.txt
+-rw-rw-r-- 1 shreya shreya 41 Sep  3 11:59 a.txt
+-rw-rw-r-- 1 shreya shreya  0 Sep  3 12:18 fruitlist.txt
+-rw-rw-r-- 1 shreya shreya 51 Sep  3 12:07 logfile.txt
+-rw-rw-r-- 1 shreya shreya 42 Sep  3 12:32 -M
+-rw-rw-r-- 1 shreya shreya 26 Sep  3 12:22 marks.txt
+-rw-rw-r-- 1 shreya shreya 21 Sep  3 12:31 months.txt
+-rw-rw-r-- 1 shreya shreya  0 Sep  3 12:19 numbers.txt
+-rw-rw-r-- 1 shreya shreya  0 Sep  3 12:18 s_numbers.txt
+-rw-rw-r-- 1 shreya shreya  0 Sep  3 12:16 sorted_fruitlist
+-rw-rw-r-- 1 shreya shreya  0 Sep  3 12:16 sorted_numbers
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls -l | cut -f2 -d "-"
+total 20
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat fruitlist.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat > fruitlist.txt
+apple
+banana
+peach
+pineapple
+kiwi
+orange
+mango
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cut -c 1,4,7 fruitlist.txt
+al
+ba
+pc
+pep
+ki
+on
+mg
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cut -c 1-3,8 fruitlist.txt
+app
+ban
+pea
+pinl
+kiw
+ora
+man
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cut -c 3- fruitlist.txt
+ple
+nana
+ach
+neapple
+wi
+ange
+ngo
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cut -f 1,4,7 fruitlist.txt
+apple
+banana
+peach
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed ' ' fruitlist.txt
+apple
+banana
+peach
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed -n '3p' fruitlist.txt
+peach
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed -n '2,5p' fruitlist.txt
+banana
+peach
+pineapple
+kiwi
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed '3d' fruitlist.txt
+apple
+banana
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/pp/RR/' fruitlist.txt
+aRRle
+banana
+peach
+pineaRRle
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat fruitlist.txt
+apple
+banana
+peach
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/p/R' fruitlist.txt
+sed: -e expression #1, char 5: unterminated `s' command
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/p/P/' fruitlist.txt
+aPple
+banana
+Peach
+Pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/p/P/g' fruitlist.txt
+aPPle
+banana
+Peach
+PineaPPle
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/apple/apples/gi' fruitlist.txt
+apples
+banana
+peach
+pineapples
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed '3s/p/R/' fruitlist.txt
+apple
+banana
+Reach
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed -i 's/b/B/g' fruitlist.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed ' ' fruitlist.txt
+apple
+Banana
+peach
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/pp/(&)/' fruitlist.txt
+a(pp)le
+Banana
+peach
+pinea(pp)le
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls -l | grep ^d | wc -l
+0
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls
+ab.txt  fruitlist.txt  -M         months.txt   s_numbers.txt     sorted_numbers
+a.txt   logfile.txt    marks.txt  numbers.txt  sorted_fruitlist
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls -l | grep ^a | wc -l
+0
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ mkdir a
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ls -l | grep ^a | wc -l
+0
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ echo "hello world" | tr 'a-z' 'A-Z'
+HELLO WORLD
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ echo "this is a test" | tr ' ' '-'
+this-is-a-test
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ tr 'a' 'w' < fruitlist.txt
+wpple
+Bwnwnw
+pewch
+pinewpple
+kiwi
+orwnge
+mwngo
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ tr -s "B" < fruitlist.txt
+apple
+Banana
+peach
+pineapple
+kiwi
+orange
+mango
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ echo "hello 123 world 456" | tr -d '0-9'
+hello  world 
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ echo "aa  bb  ccc" | tr -s ' '
+aa bb ccc
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ echo "linux command" | tr -d 'aeiou'
+lnx cmmnd
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ echo "Phone: 8933783, Code: 4578" | tr -cd '0-9\n'
+89337834578
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ ps
+    PID TTY          TIME CMD
+   3340 pts/0    00:00:00 bash
+   4202 pts/0    00:00:00 ps
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ kill 4202
+bash: kill: (4202) - No such process
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ kill 3340
