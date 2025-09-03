@@ -159,3 +159,135 @@ This is the second line of text
 shreya@shreyasvm:~/OS_Lab_Practical/lab1$ head file.txt
 This is the line of text
 This is the second line of text
+hreya@shreyasvm:~/OS_Lab_Practical/lab1$ head file.txt
+This is the line of text
+This is the second line of text
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ head -n 1 file.txt
+This is the line of text
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ tail file.txt
+This is the line of text
+This is the second line of text
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ tail -n 1 file.txt
+This is the second line of text
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ touch filecopy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mv file.txt filecopy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mkdir dir1
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+abc9       a.txt     dir1          mp3files.txt  tmp
+alone.mp3  dino.txt  filecopy.txt  program.c
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mv alone.mp3 dir1/
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+abc9  a.txt  dino.txt  dir1  filecopy.txt  mp3files.txt  program.c  tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ touch a_copy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mv -i a.txt a_copy.txt
+mv: overwrite 'a_copy.txt'? y
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+abc9  a_copy.txt  dino.txt  dir1  filecopy.txt  mp3files.txt  program.c  tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ touch f.txt f_copy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mv -f f.txt f_copy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+abc9        dino.txt  f_copy.txt    mp3files.txt  tmp
+a_copy.txt  dir1      filecopy.txt  program.c
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rm f_copy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+abc9  a_copy.txt  dino.txt  dir1  filecopy.txt  mp3files.txt  program.c  tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir -r tmp
+rmdir: invalid option -- 'r'
+Try 'rmdir --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ mkdir a aa
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir -r a
+rmdir: invalid option -- 'r'
+Try 'rmdir --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir -f aa
+rmdir: invalid option -- 'f'
+Try 'rmdir --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls
+a   abc9        dino.txt  filecopy.txt  program.c
+aa  a_copy.txt  dir1      mp3files.txt  tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir aa
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir -f a
+rmdir: invalid option -- 'f'
+Try 'rmdir --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ rmdir --help
+Usage: rmdir [OPTION]... DIRECTORY...
+Remove the DIRECTORY(ies), if they are empty.
+
+      --ignore-fail-on-non-empty
+                    ignore each failure to remove a non-empty directory
+  -p, --parents     remove DIRECTORY and its ancestors;
+                    e.g., 'rmdir -p a/b' is similar to 'rmdir a/b a'
+
+  -v, --verbose     output a diagnostic for every directory processed
+      --help        display this help and exit
+      --version     output version information and exit
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Full documentation <https://www.gnu.org/software/coreutils/rmdir>
+or available locally via: info '(coreutils) rmdir invocation'
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -name "a"
+./a
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -name "*.txt"
+./dino.txt
+./mp3files.txt
+./a_copy.txt
+./filecopy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -name d
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -type d
+.
+./abc9
+./dir1
+./a
+./tmp
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -type file
+find: Must separate multiple arguments to -type using: ','
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -type f
+./dir1/alone.mp3
+./tmp/temp
+./dino.txt
+./mp3files.txt
+./a_copy.txt
+./filecopy.txt
+./program.c
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *.txt
+a_copy.txt  dino.txt  filecopy.txt  mp3files.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ find . -type f -name "*.txt"
+./dino.txt
+./mp3files.txt
+./a_copy.txt
+./filecopy.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[0-9]
+abc9:
+
+dir1:
+alone.mp3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls *[0-9]*
+mp3files.txt
+
+abc9:
+
+dir1:
+alone.mp3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls "????*"
+ls: cannot access '????*': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls ????*
+a_copy.txt  dino.txt  filecopy.txt  mp3files.txt  program.c
+
+abc9:
+
+dir1:
+alone.mp3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls ????
+abc9:
+
+dir1:
+alone.mp3
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls -d ????
+abc9  dir1
+shreya@shreyasvm:~/OS_Lab_Practical/lab1$ ls [!aeiouAEIOU]*
+dino.txt  filecopy.txt  mp3files.txt  program.c
+
+dir1:
+alone.mp3
+
+tmp:
+temp
