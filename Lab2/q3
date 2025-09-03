@@ -1,0 +1,67 @@
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -c ':ICT:' studentInformation.txt
+4
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/:IT:/:Information Technology:/g' studentInformation.txt
+RegistrationNo:Name:Department:Branch:Section:Sub1:Sub2:Sub3
+1234:XYZ:ICT:CCE:A:80:60:70
+1235:ABC:Information Technology:CSE:A:75:65:55
+1236:LMN:ICT:ECE:B:85:70:90
+1237:PQR:MECH:MECH:C:50:60:65
+1238:DEF:CIVIL:CIVIL:B:68:72:70
+1239:GHI:ICT:CCE:A:90:88:95
+1240:JKL:Information Technology:CSE:C:45:55:50
+1241:MNO:EEE:EEE:A:77:66:80
+1242:STU:ICT:ECE:B:88:92:85
+1243:VWX:Information Technology:CSE:B:60:65:70
+
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep '^1234:' studentInformation.txt | awk -F: '{avg=($6+$7+$8)/3; print avg}'
+70
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed '1s/.*/\U&/' studentInformation.txt
+REGISTRATIONNO:NAME:DEPARTMENT:BRANCH:SECTION:SUB1:SUB2:SUB3
+1234:XYZ:ICT:CCE:A:80:60:70
+1235:ABC:IT:CSE:A:75:65:55
+1236:LMN:ICT:ECE:B:85:70:90
+1237:PQR:MECH:MECH:C:50:60:65
+1238:DEF:CIVIL:CIVIL:B:68:72:70
+1239:GHI:ICT:CCE:A:90:88:95
+1240:JKL:IT:CSE:C:45:55:50
+1241:MNO:EEE:EEE:A:77:66:80
+1242:STU:ICT:ECE:B:88:92:85
+1243:VWX:IT:CSE:B:60:65:70
+
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -l "MIT" *
+grep: invalid option -- 'M'
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -n "MIT" studentInformation.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep "MIT" studentInformation.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ touch MIT2027 MIT2026 MIT2025
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep -l "MIT" *
+grep: invalid option -- 'M'
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep "MIT" *
+grep: invalid option -- 'M'
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ rm MIT2027 MIT2026 MIT2025
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ touch mitinfo.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ cat > mitinfo.txt
+MIT 2024
+MIT 2025 
+MIT 2027
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ grep "MIT" mitinfo.txt
+MIT 2024
+MIT 2025
+MIT 2027
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/'MIT'/"Manipal Institute of Technology/g' mitinfo.txt
+"Manipal Institute of Technology 2024
+"Manipal Institute of Technology 2025
+"Manipal Institute of Technology 2027
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/'MIT'/'Manipal Institute of Technology/g' mitinfo.txt
+> 
+> ^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab2$ sed 's/'MIT'/Manipal Institute of Technology/g' mitinfo.txt
+Manipal Institute of Technology 2024
+Manipal Institute of Technology 2025
+Manipal Institute of Technology 2027
