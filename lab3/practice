@@ -1,1 +1,76 @@
 
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano w.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./w.sh
+5
+12345
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ chmod +x q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q1.sh
+Enter filename
+hello.txt
+./q1.sh: line 8: unexpected EOF while looking for matching `"'
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ls
+c1.sh  c3.sh   equ.sh  hello.txt  loop.sh  sw.sh    w.sh
+c2.sh  epr.sh  fe.sh   hh         q1.sh    test.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q1.sh
+Enter filename
+hello.txt
+./q1.sh: line 8: unexpected EOF while looking for matching `"'
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q1.sh
+Enter filename
+hh
+./q1.sh: line 8: unexpected EOF while looking for matching `"'
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q1.sh
+Enter filename
+hello.txt
+It is file and exists
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ chmod +x q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q3.sh
+mv: cannot stat '': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ls
+c1.sh  c3.sh   equ.sh  hello.text  loop.sh  q3.sh  test.sh
+c2.sh  epr.sh  fe.sh   hh          q1.sh    sw.sh  w.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q5.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ chmod +x q5.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q5.sh
+enter ext
+.text 
+enter dest
+hh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ls
+c1.sh  c3.sh   equ.sh  hello.text  loop.sh  q3.sh  sw.sh    w.sh
+c2.sh  epr.sh  fe.sh   hh          q1.sh    q5.sh  test.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ls hello
+ls: cannot access 'hello': No such file or directory
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ls hh
+hello.text
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q6.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ chmod +x q6.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q6.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ touch ex.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q6.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ l
+c1.sh*  c3.sh*   equ.sh*  fe.sh*      hh/       q1.sh*  q5.sh*  sw.sh*    w.sh*
+c2.sh*  epr.sh*  ex.txt   hello.text  loop.sh*  q3.sh*  q6.sh*  test.sh*
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ls
+c1.sh  c3.sh   equ.sh  fe.sh       hh       q1.sh  q5.sh  sw.sh    w.sh
+c2.sh  epr.sh  ex.txt  hello.text  loop.sh  q3.sh  q6.sh  test.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ nano q7.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ cat > hello.txt
+hi
+hello
+hola
+hey
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ chmod +x q7.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab3$ ./q7.sh
+enter filename
+hello.txt
+hi
+hola
