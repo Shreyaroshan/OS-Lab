@@ -1,1 +1,88 @@
+shreya@shreyasvm:~$ cd OS_Lab_Practical/lab4
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./arr.sh
+36 889 8
+entered input is...
+36  889  8  shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano ar.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x ar.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./ar.sh
+{arrayOfNumber[@]}
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano fun.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x fun.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./fun.sh
+./fun.sh: line 3: a[@]b[@]: invalid variable name
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano fun.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./fun.sh
+foo
+foo
+bar
+bar
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ls
+arr.sh  ar.sh  fun.sh  q1.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ touch a.txt b.txt
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./q1.sh
+enter src
+a.txt
+enter dest
+b.txt
+copied succesfully
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano q2.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x q2.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./q2.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./q2.sh b.txt
+removed
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ls
+arr.sh  ar.sh  a.txt  fun.sh  q1.sh  q2.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano q3
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x q3.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./q3.sh "OS lab" "Sort it" "Command line"
+Command line
+OS lab
+Sort it
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano q4.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x q4.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./q4.sh -linecount a.txt
+0
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ nano q5.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ chmod +x q5.sh
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ cat > input.txt
+hello
+patter here
+pattern here
+no match
+again pattern
+^C
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ ./q5.sh pattern input.txt
+Menu
+1.Search
+2. Delete
+3. Exit
+Enter choice: 1
+pattern here
+again pattern
+Menu
+1.Search
+2. Delete
+3. Exit
+Enter choice: 2
+deleted
+Menu
+1.Search
+2. Delete
+3. Exit
+Enter choice: 1
+Menu
+1.Search
+2. Delete
+3. Exit
+Enter choice: 3
+Exiting...
+shreya@shreyasvm:~/OS_Lab_Practical/lab4$ cat input.txt
+hello
+patter here
+ here
+no match
+again 
 
