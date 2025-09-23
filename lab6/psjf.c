@@ -42,7 +42,7 @@ int main()
     int minimum=INT_MAX;
     for (i=0;i<n;i++)
     {
-    if(p[i].arrival<current_time && is_completed[i]==false)
+    if(p[i].arrival<=current_time && is_completed[i]==false)
     {
     if(bt_remaining[i]<minimum)
     {
@@ -51,7 +51,7 @@ int main()
     }
     if(bt_remaining[i]==minimum)
     {
-    if(p[i].arrival<=p[min_index].arrival)
+    if(p[i].arrival<p[min_index].arrival)
     {
     minimum=bt_remaining[i];
     min_index=i;
